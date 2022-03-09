@@ -67,10 +67,16 @@ const generateImage = async (member) => {
 
   const img = await generateImage(member)
 
-      
-  member.guild.channels.cache.get('856191026058625044').send({
-    content: `Hey ${member}, welcome to **${member.guild.name}!**  Make sure to read the <#781592242371952701> ,  get your <#781866203336409169> ,  and read the <#915180660262580235> .  Hope you have a good time here!`,
+  // member.guild.channels.cache.get('856191026058625044').send({
+  //   content: `Hey ${member}, welcome to **${member.guild.name}!**  Make sure to read the <#781592242371952701> ,  get your <#781866203336409169> ,  and read the <#915180660262580235> .  Hope you have a good time here!`,
+  // files: [img]
+  // })
+
+   if (member.guild.id === "856191026058625044") {
+   client.channels.cache.get("950355725509607474").send({
+      content: `Hey ${member}, welcome to **${member.guild.name}!**  Make sure to read the <#781592242371952701> ,  get your <#781866203336409169> ,  and read the <#915180660262580235> .  Hope you have a good time here!`,
   files: [img]
-  })
+   })
+}
   }
 };
